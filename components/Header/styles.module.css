@@ -1,32 +1,39 @@
+:root {
+  /* Light theme */
+  --header-background-color: white;
+  --header-text-color: black;
+
+  /* Dark theme */
+  --dark-header-background-color: rgb(0, 0, 0);
+  --dark-header-text-color: rgb(255, 255, 255);
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-}
-
-/* .center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-} */
-
-.header {
+  padding: 1.5rem 10rem;
   position: relative;
+
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
 }
 
 .logo {
+  width: auto;
+  height: 3rem;
+  margin-left: 0.5rem;
 }
 
 .navWrapper {
-  background-color: rgb(41, 212, 49);
+  /* background-color: rgb(41, 212, 49); */
   display: flex;
   flex-direction: row;
 }
 
 .navLinks {
-  background-color: rgb(173, 71, 37);
+  /* background-color: rgb(173, 71, 37); */
 
   display: flex;
   flex-direction: row;
@@ -35,7 +42,12 @@
 }
 
 .contactLink {
-  background-color: rgb(50, 30, 167);
+  /* background-color: rgb(50, 30, 167); */
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: var(--header-text-color);
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
 
   display: flex;
   flex-direction: row;
@@ -43,7 +55,9 @@
 }
 
 .arrowIcon {
-  display: flex;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: 0.5rem;
 }
 
 .h1 {
@@ -54,5 +68,16 @@
   .navLinks,
   .contactLink {
     display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .header {
+    background-color: var(--dark-header-background-color);
+    color: var(--dark-header-text-color);
+  }
+
+  .contactLink {
+    border-color: var(--dark-header-text-color);
   }
 }
