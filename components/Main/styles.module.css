@@ -1,8 +1,122 @@
-.main > div {
+:root {
+  /* Light theme */
+  --header-background-color: white;
+  --header-text-color: black;
+
+  /* Dark theme */
+  --dark-header-background-color: rgb(0, 0, 0);
+  --dark-header-text-color: rgb(255, 255, 255);
+}
+
+.main {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileImg {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+}
+
+.handIconWrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  gap: 0.5rem;
+}
+
+.main h3 {
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  font-family: "Ovo"; /* Google font */
+}
+
+.handIcon {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+}
+
+.main h1 {
+  padding: 0rem 1rem; /* Tarpai viduje */
+  margin: 0; /* Tarpai išoriai */
+
+  width: 100%; /* allow it to grow */
+  max-width: 800px; /* don’t exceed this */
+  min-width: 150px; /* don’t shrink smaller than this */
+
+  font-family: "Ovo"; /* Google font */
+  line-height: 1.2;
+  font-size: clamp(4rem, 6vw, 6rem);
+  text-align: center;
+
+  /* border: 2px solid #333; */
+}
+
+.main p {
+  padding: 0.5rem 1rem; /* Tarpai */
+  /* border: 2px solid #333; */
+  background-color: #f0f0f0;
+  width: 100%; /* allow it to grow */
+  max-width: 650px; /* don’t exceed this */
+  min-width: 250px; /* don’t shrink smaller than this */
+  line-height: 1.4;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.buttonsWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.5rem 1rem; /* Tarpai */
+}
+
+.contactLink {
+  background-color: var(--dark-header-background-color);
+  color: var(--dark-header-text-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  gap: 0.5rem;
+}
+
+.arrowIconWhite {
+  width: auto;
+  height: 0.8rem;
+}
+
+.resumeLink {
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid var(--header-text-color);
+  padding: 0.5rem 1.5rem;
+  gap: 0.5rem;
+}
+
+.downloadIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.test {
+  width: 50%;
+  height: 1000px;
+  background-color: olive;
 }
