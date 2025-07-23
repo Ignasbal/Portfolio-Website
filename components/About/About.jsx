@@ -23,7 +23,7 @@ const About = () => {
             background, and feel free to get in touch. Let's create something
             great together!
           </p>
-          <ul>
+          <ul className={styles.infoList}>
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li key={index}>
                 <Image src={icon} alt={title} />
@@ -33,10 +33,11 @@ const About = () => {
             ))}
           </ul>
 
-          <ul>
+          <h3 className={styles.toolText}>Web Tools I Use</h3>
+
+          <ul className={styles.toolList}>
             {toolsData.map((tool, index) => (
               <li key={index}>
-                {" "}
                 <Image src={tool} alt="Web Tools" className={styles.tool} />
               </li>
             ))}
